@@ -32,12 +32,24 @@ All configuration options
 + excludes (String[]) - List of files to exclude. Specified as fileset patterns which are relative to the source directory.
 + force (boolean) - When true forces the Dust.js compiler to always compile the HTML templates. By default templates are only compiled when modified or the compliled javascript template does not exists. Default value is: false.
 
+Implementation
+--------------
+
+Add github repository to your pom.xml and then configure the plugin
+
+    <repositories>
+	    <repository>
+	        <id>dustjs-maven-plugin-mvn-repo</id>
+	        <url>https://raw.github.com/DanMonroe/dustjs-maven-plugin/mvn-repo/</url>
+	    </repository>
+    </repositories>
+
 Example pom.xml configuration:
 
     <plugin>
 	    <groupId>com.altair.common.dust</groupId>
 	    <artifactId>dust-maven-plugin</artifactId>
-	    <version>1.0.0</version>
+	    <version>1.2.2</version>
 	    <configuration>
 	        <sourceDirectory>src/main/webapp/scripts/templates/dust/source</sourceDirectory>
 	        <outputDirectory>src/main/webapp/scripts/templates/dust/js</outputDirectory>
